@@ -5,10 +5,21 @@ import { motion } from "framer-motion";
 import { ArrowUpRight, BarChart3, CheckCircle2, Image as ImageIcon } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Badge } from "@/components/ui/Badge";
-import { Card } from "@/components/ui/Card";
+import { ScrapbookCard } from "@/components/ui/ScrapbookCard";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Modal } from "@/components/ui/Modal";
 import { caseStudyModules, CaseStudyModule } from "@/data/caseStudies";
+
+const scrapbookRotations = ["rotate-1", "-rotate-1", "rotate-0", "-rotate-0.5", "rotate-0.5", "-rotate-1", "rotate-1"];
+const marginaliaNotes = [
+  "Record breaking! 🔥",
+  "Precision targeting",
+  "GA4 traffic surge",
+  "Dynamic %town% SEO",
+  "Local map domination",
+  "2x static reach!",
+  "72.6% CTR in bio link"
+];
 
 export function CaseStudiesGrid() {
   const [selectedModule, setSelectedModule] = useState<CaseStudyModule | null>(null);
@@ -18,15 +29,16 @@ export function CaseStudiesGrid() {
       <Container>
         <SectionHeader
           badge="Mullingar Autos Case Study"
-          title="Multi-Channel Growth Modules"
-          description="Click any module below to inspect Andreea's full campaign data, strategic execution frameworks, and verified screenshot proof."
+          title="Multi-Channel Growth Scrapbook"
+          description="Click any artifact below to inspect Andreea's full campaign data, strategic execution frameworks, and verified screenshot proof."
         />
 
-        {/* Asymmetric Bento Grid Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Living Scrapbook Bento Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {caseStudyModules.map((module, index) => {
-            // Make flagship modules span 2 columns on desktop for editorial asymmetry
             const isFeatured = index === 0 || index === 5;
+            const rotation = scrapbookRotations[index % scrapbookRotations.length];
+            const note = marginaliaNotes[index % marginaliaNotes.length];
 
             return (
               <motion.div
@@ -37,8 +49,10 @@ export function CaseStudiesGrid() {
                 transition={{ duration: 0.4, delay: index * 0.08 }}
                 className={isFeatured ? "lg:col-span-2" : "lg:col-span-1"}
               >
-                <Card
+                <ScrapbookCard
                   onClick={() => setSelectedModule(module)}
+                  rotation={rotation}
+                  note={note}
                   className="h-full flex flex-col justify-between group cursor-pointer"
                 >
                   <div>
@@ -68,7 +82,7 @@ export function CaseStudiesGrid() {
                       View Proof &rarr;
                     </span>
                   </div>
-                </Card>
+                </ScrapbookCard>
               </motion.div>
             );
           })}

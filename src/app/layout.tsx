@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Instrument_Serif } from "next/font/google";
+import { Inter, Instrument_Serif, Caveat } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -16,6 +16,13 @@ const instrumentSerif = Instrument_Serif({
   display: "swap",
 });
 
+const caveat = Caveat({
+  subsets: ["latin"],
+  weight: ["400", "600"],
+  variable: "--font-handwritten",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: "Andreea | Digital Marketing Portfolio & Mullingar Autos Growth Engine",
   description: "Data-driven campaign execution, local SEO optimization, short-form video production, and high-performance advertising scaling regional automotive sales.",
@@ -28,7 +35,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${instrumentSerif.variable} dark`}>
+    <html lang="en" className={`${inter.variable} ${instrumentSerif.variable} ${caveat.variable} dark`}>
       <body className="bg-zinc-950 text-zinc-100 min-h-screen selection:bg-rose-500/30 selection:text-rose-200">
         {children}
       </body>
