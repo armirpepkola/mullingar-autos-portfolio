@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/Badge";
 import { StatCounter } from "@/components/ui/StatCounter";
 import { BabysBreathAccent } from "@/components/ui/BabysBreathAccent";
 import { EnergyPulse } from "@/components/ui/EnergyPulse";
+import { KineticHeading } from "@/components/ui/KineticHeading";
 
 export function Hero() {
   return (
@@ -38,20 +39,18 @@ export function Hero() {
           </Badge>
         </motion.div>
 
-        {/* Main Headline */}
+        {/* Main Kinetic Headline */}
         <motion.div
           initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="max-w-4xl"
+          className="max-w-4xl mb-8"
         >
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-zinc-100 leading-[1.1] mb-6">
-            Digital Marketing with <br className="hidden sm:inline" />
-            <span className="font-serif italic font-normal text-transparent bg-clip-text bg-linear-to-r from-rose-400 via-amber-300 to-violet-400">
-              Heart, Energy & Pizzazz.
-            </span>
-          </h1>
-          <p className="text-lg sm:text-xl text-zinc-300 font-normal leading-relaxed max-w-2xl mb-8">
+          <KineticHeading 
+            text="Digital Marketing with Heart, Energy & Pizzazz." 
+            italicWord="Heart, Energy & Pizzazz." 
+          />
+          <p className="text-lg sm:text-xl text-zinc-300 font-normal leading-relaxed max-w-2xl mt-6">
             I turn data-driven campaigns, local SEO, and short-form video into joyful, high-converting customer experiences that scale regional automotive sales.
           </p>
         </motion.div>
@@ -82,7 +81,7 @@ export function Hero() {
           </motion.a>
         </motion.div>
 
-        {/* Core Philosophy Quote with Scrapbook Framing */}
+        {/* Core Philosophy Quote */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
