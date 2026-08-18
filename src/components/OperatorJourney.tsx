@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Users, Megaphone, ShoppingCart, BarChart, ArrowRight, Heart, Smile } from "lucide-react";
+import { Users, Megaphone, ShoppingCart, BarChart, Smile } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { ScrapbookCard } from "@/components/ui/ScrapbookCard";
 import { SectionHeader } from "@/components/ui/SectionHeader";
@@ -11,28 +11,28 @@ const operatorPillars = [
   {
     icon: Users,
     title: "Customer Service & Warmth",
-    description: "Making everyone instantly comfortable with an infectious laugh that fills the room, a down-to-earth presence, and genuine care for every single person.",
-    note: "Recognised a mile away! 😊",
+    description: "I love making people feel instantly welcome. Whether it's sharing a laugh, bringing a humble presence, or simply listening, I care deeply about every person who walks through our doors.",
+    note: "Here to help 😊",
     rotation: "-rotate-1",
   },
   {
     icon: Megaphone,
-    title: "Ambitious Digital Marketing",
-    description: "Multi-channel ad execution, social growth, short-form video production, and local SEO driven by relentless drive, creativity, and high energy.",
-    note: "Fierce ambition 🚀",
+    title: "Digital Growth & Marketing",
+    description: "I combine multi channel campaign execution, local SEO, and content production. I bring curiosity, creativity, and steady energy to every project I take on.",
+    note: "Always learning 📚",
     rotation: "rotate-1",
   },
   {
     icon: ShoppingCart,
-    title: "Sales Conversion",
-    description: "Bridging online interest with showroom footfall, guiding prospective buyers seamlessly through vehicle financing with extraordinary care and attention.",
-    note: "Closing with heart 🤍",
+    title: "Sales & Customer Journeys",
+    description: "I enjoy bridging online interest with real forecourt visits. By guiding buyers smoothly through vehicle financing and enquiries, I try to make car buying feel clear, exciting, and personal.",
+    note: "Closing with heart 🤝",
     rotation: "-rotate-0.5",
   },
   {
     icon: BarChart,
     title: "Data Analytics & Results",
-    description: "Leveraging GA4 attribution, ad performance metrics, and consumer insights to ensure every campaign delivers the absolute best possible results.",
+    description: "I rely on GA4 attribution, ad metrics, and consumer insights to learn what works. For me, data isn't just about numbers—it's a tool to help us serve our customers and business better every single day.",
     note: "Data + Soul = Success",
     rotation: "rotate-0.5",
   },
@@ -48,8 +48,8 @@ export function OperatorJourney() {
       <Container className="relative z-10">
         <SectionHeader
           badge="Full-Stack Business Operator"
-          title="Unmatched Energy, Care & Results"
-          description="True marketing excellence isn't just about strategy—it's about Andreea's warm, welcoming spirit, infectious laughter, and fierce ambition to deliver perfection."
+          title="Energy, Care & Results"
+          description="I believe great marketing goes beyond strategy;it starts with genuine warmth, positive energy, and a real commitment to making people feel valued."
         />
 
         {/* Personal Touch Banner */}
@@ -65,10 +65,10 @@ export function OperatorJourney() {
           </div>
           <div className="text-center sm:text-left relative z-10">
             <h3 className="text-xl font-serif text-zinc-100 mb-2 flex items-center justify-center sm:justify-start gap-2">
-              The Laugh That Brightens the Room <Heart className="w-4 h-4 text-rose-400 fill-rose-400 animate-pulse" />
+              The Best Marketing Strategy: Care
             </h3>
             <p className="text-sm sm:text-base text-zinc-300 leading-relaxed">
-              If you walk into Mullingar Autos, you&apos;ll hear Andreea before you see her—her cheerful, contagious laughter echoes with warmth. She is fiercely ambitious, deeply caring, and brings an uplifting vibe that turns every team member and customer into a lifelong friend.
+              If you visit any environment I work in, chances are you&apos;ll hear me before you see me! I&apos;ve always believed that a cheerful workspace and genuine care change everything, turning daily customer touchpoints into lasting relationships with both my team and our costumers.
             </p>
           </div>
         </motion.div>
@@ -99,7 +99,6 @@ export function OperatorJourney() {
                   </div>
                   <div className="mt-6 pt-4 border-t border-zinc-800 flex items-center text-xs font-mono text-zinc-400 group-hover:text-rose-400 transition-colors">
                     <span>Pillar {index + 1} of 4</span>
-                    <ArrowRight className="w-3.5 h-3.5 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" />
                   </div>
                 </ScrapbookCard>
               </motion.div>
