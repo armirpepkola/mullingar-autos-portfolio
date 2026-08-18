@@ -20,7 +20,7 @@ export const videoShowcaseData: VideoItem[] = [
     watchTime: "9h 48m Watch Time",
     retention: "10s Avg Retention",
     description: "Scripted, filmed, and edited fast-paced vehicle walkthroughs highlighting key EV features with Andreea's warm, engaging presenter style.",
-    format: "9:16 Vertical Video (Mobile Optimized)",
+    format: "9:16 Vertical Video (Mobile Optimised)",
     screenshotProofLabel: "Meta Business Suite Reels Insights & Watch Time Analytics Proof",
     highlights: [
       "Outperformed static dealership imagery by 2x in organic reach.",

@@ -53,7 +53,7 @@ export function ScrapbookCard({ children, className, onClick, rotation = "rotate
       {/* Handwritten Marginalia Note */}
       {note && (
         <div className="absolute -top-1 right-6 z-30 handwritten text-rose-300 text-xl rotate-2 bg-zinc-900/95 px-3 py-1 rounded-md border border-rose-500/30 shadow-2xl pointer-events-none transition-transform group-hover/scrapbook:scale-110 group-hover/scrapbook:rotate-3">
-          {note} ✍️
+          {note}
         </div>
       )}
 
@@ -90,7 +90,7 @@ export function ScrapbookCard({ children, className, onClick, rotation = "rotate
           />
         )}
 
-        {/* Content layer optimized with crisp subpixel antialiasing */}
+        {/* Content layer optimised with crisp subpixel antialiasing */}
         <div className="relative z-10 antialiased" style={{ transform: "translateZ(20px)", backfaceVisibility: "hidden" }}>
           {children}
         </div>

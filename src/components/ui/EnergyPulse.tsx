@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Sparkles, Heart } from "lucide-react";
+// import { Sparkles } from "lucide-react";
 
 export function EnergyPulse() {
   const [isActive, setIsActive] = useState(false);
@@ -37,8 +37,8 @@ export function EnergyPulse() {
                 transition={{ duration: 0.8 }}
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-zinc-900/90 border border-rose-500 text-rose-200 text-sm font-mono shadow-2xl backdrop-blur-xl"
               >
-                <Heart className="w-4 h-4 text-rose-400 fill-rose-400 animate-bounce" />
-                <span>*Infectious laughter fills the room!* ✨</span>
+                {/* <Heart className="w-4 h-4 text-rose-400 fill-rose-400 animate-bounce" /> */}
+                <span>Marketing & Customer Excellence</span>
               </motion.div>
             </div>
           </motion.div>
@@ -48,7 +48,7 @@ export function EnergyPulse() {
       <button
         onClick={handleClick}
         className="relative group inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-rose-950/40 border border-rose-500/30 text-rose-200 text-xs font-mono overflow-hidden transition-all hover:border-rose-500/60 shadow-lg shadow-rose-500/5 cursor-pointer"
-        title="Tap to feel Andreea's energy & laughter!"
+        title="Tap to feel Andreea's energy!"
       >
         <span className="absolute inset-0 bg-linear-to-r from-rose-500/10 to-amber-500/10 opacity-0 group-hover:opacity-100 transition-opacity" />
         
@@ -66,8 +66,8 @@ export function EnergyPulse() {
           ))}
         </AnimatePresence>
 
-        <Sparkles className="w-3.5 h-3.5 text-rose-400 animate-spin" style={{ animationDuration: "5s" }} />
-        <span>[ Tap for Infectious Laughter & Energy ✨ ]</span>
+        {/* <Sparkles className="w-3.5 h-3.5 text-rose-400 animate-spin" style={{ animationDuration: "5s" }} /> */}
+        <span>Andreea Ciolac</span>
       </button>
     </div>
   );

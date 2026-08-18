@@ -2,33 +2,36 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowUpRight, BarChart3, CheckCircle2, Image as ImageIcon, RefreshCw, X } from "lucide-react";
+import { BarChart3, CheckCircle2, Image as ImageIcon, RefreshCw, X } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Badge } from "@/components/ui/Badge";
 import { ScrapbookCard } from "@/components/ui/ScrapbookCard";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { caseStudyModules, CaseStudyModule } from "@/data/caseStudies";
+import Image from "next/image";
 
 const scrapbookRotations = ["rotate-1", "-rotate-1", "rotate-0", "-rotate-0.5", "rotate-0.5", "-rotate-1", "rotate-1"];
 
 // Unique front marginalia note for each card
 const customFrontNotes = [
   "7.02M impressions! 🔥",
-  "Map domination 📍",
+  "Low CPC Bidding ⚡️",
   "40K+ active users 📈",
-  "2x static reach! 🎬",
+  "Local Search Dominance! 🔍",
   "High conversion CTR 🎯",
+  "2x static reach! 🎬",
   "72.6% bio CTR! ✨"
 ];
 
 // Unique bespoke backstage polaroid reflection for each card's backside
 const customBackstageNotes = [
   "Pushing 7M+ impressions on DoneDeal took relentless optimization across budgeting and regional targeting. Seeing Westmeath car buyers engage at this scale was unforgettable!",
-  "Local SEO is all about hyper-local relevance. Optimizing our Google Business Profile and geo-targeted keywords brought Mullingar drivers straight to our showroom door.",
+  "Structuring our PPC campaign into distinct intent tiers brand defense, model launches, and high volume regional terms, allowed us to capture peak buyer intent while driving CPCs down to an ultra efficient €0.24!",
   "Diving deep into GA4 analytics allowed us to track every single user journey. Turning raw data into actionable growth insights is where strategy meets art.",
-  "Filming dynamic walk-arounds brought our cars to life. Showing genuine energy on camera outperformed static dealership ads 2x!",
-  "Structuring multi-format ad campaigns across Facebook and Instagram ensured we captured buyers right during their active consideration phase.",
-  "Optimizing social funnels and bio links created a seamless bridge between social discovery and showroom test drives. Every click mattered!"
+  "Structuring clean HTML landing pages and dynamic regional tags ('%town%') allowed us to capture high intent local buyers searching for Volkswagen and ŠKODA models right across Westmeath.",
+  "Dominating local map packs and search intent across Westmeath turned online browsers into physical forecourt visitors. Every phone call and direction request represents a high intent local buyer walking through our doors.",
+  "Scripting, filming, and editing content full of energy brought our cars to life. Showing genuine personality on camera completely outperformed static dealership ads and built instant trust with local buyers!",
+  "Social media reach is only as good as its conversion path. Designing a streamlined Linktree hub ensured that every profile view turned into traffic routed straight to our Approved Cars and active sales offers!"
 ];
 
 export function CaseStudiesGrid() {
@@ -40,9 +43,9 @@ export function CaseStudiesGrid() {
     <section id="case-studies" className="py-24 border-b border-zinc-900 relative">
       <Container>
         <SectionHeader
-          badge="Mullingar Autos Case Study"
-          title="Multi-Channel Growth Scrapbook"
-          description="Click any artifact below to inspect Andreea's full campaign data, strategic execution frameworks, and verified screenshot proof."
+          badge="Featured Case Study: Mullingar Autos"
+          title="Multi Channel Growth Scrapbook"
+          description="Select any module below to inspect full campaign data, strategic execution frameworks, and verified performance proof."
         />
 
         {/* Living Scrapbook Bento Grid */}
@@ -74,9 +77,6 @@ export function CaseStudiesGrid() {
                   <div>
                     <div className="flex items-center justify-between gap-2 mb-4">
                       <Badge variant="outline">{module.category}</Badge>
-                      <span className="text-xs font-mono text-zinc-400 group-hover:text-rose-400 transition-colors flex items-center gap-1">
-                        Inspect Proof <ArrowUpRight className="w-3.5 h-3.5" />
-                      </span>
                     </div>
 
                     <h3 className="text-2xl font-serif tracking-wide text-zinc-100 mb-1 group-hover:text-white transition-colors">
@@ -154,7 +154,7 @@ export function CaseStudiesGrid() {
                     className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-zinc-900 border border-zinc-800 text-rose-300 text-xs font-mono hover:border-rose-500/40 hover:bg-zinc-800 transition-all cursor-pointer shadow-xs"
                   >
                     <RefreshCw className="w-3.5 h-3.5 text-rose-400" />
-                    <span>{isFlipped ? "View Front Details" : "Flip Polaroid"}</span>
+                    <span>{isFlipped ? "Flip" : "Flip"}</span>
                   </button>
                 </div>
 
@@ -172,19 +172,21 @@ export function CaseStudiesGrid() {
                       <p className="text-zinc-300 text-base leading-relaxed">{selectedModule.fullDetails}</p>
                     </div>
 
-                    {/* Screenshot Proof Frame */}
+                    {/* Screenshot Proof Frame using next/image */}
                     <div className="rounded-[28px] bg-zinc-900 border border-zinc-800 p-6 relative overflow-hidden group">
                       <div className="absolute top-0 right-0 w-48 h-48 bg-rose-500/5 rounded-full blur-3xl pointer-events-none" />
                       <div className="flex items-center gap-2 mb-3 text-xs font-mono text-rose-400">
                         <ImageIcon className="w-4 h-4" />
-                        <span>VERIFIED SCREENSHOT PROOF / CAMPAIGN ARTIFACT</span>
+                        <span>VERIFIABLE SCREENSHOT PROOF</span>
                       </div>
-                      <div className="w-full h-48 sm:h-64 rounded-2xl bg-zinc-950 border border-zinc-800/80 flex flex-col items-center justify-center p-4 text-center">
-                        <ImageIcon className="w-10 h-10 text-zinc-600 mb-2" />
-                        <p className="text-sm font-medium text-zinc-300 mb-1">{selectedModule.screenshotProofLabel}</p>
-                        <p className="text-xs text-zinc-500 max-w-md">
-                          Drop your real screenshot image files here or in `public/proof/` to display live verification for this module.
-                        </p>
+                      
+                      <div className="w-full h-48 sm:h-64 rounded-2xl bg-zinc-950 border border-zinc-800/80 overflow-hidden relative">
+                        <Image 
+                          src={selectedModule.imageSrc} 
+                          alt={`Screenshot proof for ${selectedModule.title}`}
+                          fill
+                          className="object-cover"
+                        />
                       </div>
                     </div>
 
@@ -222,14 +224,14 @@ export function CaseStudiesGrid() {
                     className={isFlipped ? "space-y-6 p-8 rounded-[28px] bg-amber-950/20 border border-amber-500/30 text-zinc-200" : "hidden"}
                   >
                     <div className="flex items-center gap-2 text-xs font-mono text-amber-300 mb-2">
-                      <span>✍️ BACKSTAGE POLAROID NOTES FROM ANDREEA</span>
+                      <span>✍️ NOTES FROM ANDREEA</span>
                     </div>
                     <h4 className="text-3xl font-serif text-amber-200 mb-4">Behind the Scenes: {selectedModule.title}</h4>
                     <p className="handwritten text-2xl text-amber-100/90 leading-relaxed">
                       &ldquo;{customBackstageNotes[selectedIndex % customBackstageNotes.length]}&rdquo;
                     </p>
                     <div className="pt-6 border-t border-amber-500/20 flex items-center justify-between text-xs font-mono text-zinc-400">
-                      <span>Mullingar Autos Growth Strategy</span>
+                      <span>Mullingar Autos Marketing Executive</span>
                       <span className="text-amber-300">Volkswagen & ŠKODA Ireland</span>
                     </div>
                   </div>

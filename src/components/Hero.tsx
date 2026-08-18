@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowUpRight, TrendingUp, Heart, Building2 } from "lucide-react";
+import { ArrowUpRight, TrendingUp, Heart, ShieldCheck } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Badge } from "@/components/ui/Badge";
 import { StatCounter } from "@/components/ui/StatCounter";
@@ -34,8 +34,8 @@ export function Hero() {
         >
           <EnergyPulse />
           <Badge variant="outline" className="py-1.5 px-3.5 flex items-center gap-1.5 border-zinc-800">
-            <Building2 className="w-3.5 h-3.5 text-amber-400" />
-            <span>Mullingar Autos Growth Engine (Volkswagen & ŠKODA)</span>
+            <ShieldCheck className="w-3.5 h-3.5 text-amber-400" />
+            <span>UCD Certified (2025)</span>
           </Badge>
         </motion.div>
 
@@ -47,11 +47,11 @@ export function Hero() {
           className="max-w-4xl mb-8"
         >
           <KineticHeading 
-            text="Digital Marketing with Heart, Energy & Pizzazz." 
-            italicWord="Heart, Energy & Pizzazz." 
+            text="Marketing with Andreea." 
+            accentWords={["Andreea"]} 
           />
           <p className="text-lg sm:text-xl text-zinc-300 font-normal leading-relaxed max-w-2xl mt-6">
-            I turn data-driven campaigns, local SEO, and short-form video into joyful, high-converting customer experiences that scale regional automotive sales.
+            I connect data driven marketing to customer journeys that scale revenue. Driving customer engagement through multiple channels and keeping operations  as smooth as a new Skoda (which I also marketed).
           </p>
         </motion.div>
 
@@ -68,7 +68,7 @@ export function Hero() {
             href="#case-studies"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-linear-to-r from-rose-500 to-amber-500 text-zinc-950 font-semibold text-sm transition-all shadow-lg shadow-rose-500/20 cursor-pointer"
           >
-            Explore Scrapbook Artifacts
+            View Marketing Campaigns
             <ArrowUpRight className="w-4 h-4 text-zinc-950" />
           </motion.a>
           <motion.a
@@ -90,12 +90,12 @@ export function Hero() {
         >
           <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-16 h-4 tape-strip z-20 pointer-events-none rounded-xs" />
           <p className="text-sm sm:text-base italic text-zinc-200">
-            &ldquo;Great marketing isn&apos;t just about clicks and impressions—it&apos;s about building genuine connections, bringing cheerful energy to every customer touchpoint, and making car buying an exciting journey.&rdquo;
+            Great marketing isn&apos;t just about clicks and impressions; it&apos;s about building genuine trust, elevating every customer touchpoint, and turning online attention into physical dealership visits.
           </p>
           <div className="mt-3 flex items-center justify-between text-xs font-mono text-rose-400">
             <span className="flex items-center gap-2">
               <Heart className="w-3.5 h-3.5 text-rose-400 fill-rose-400 animate-pulse" />
-              Andreea • Digital Marketing & Multi-Channel Growth Strategist
+              Andreea • Digital Marketing & Multi-Channel Growth
             </span>
             <span className="handwritten text-rose-300 text-base">Always with a smile :)</span>
           </div>
@@ -115,7 +115,7 @@ export function Hero() {
             <div className="text-2xl sm:text-3xl font-bold text-zinc-100 tracking-tight">
               <StatCounter value={7.02} decimals={2} suffix="M+" />
             </div>
-            <p className="text-xs text-zinc-400 mt-1">DoneDeal 252 Campaign</p>
+            <p className="text-xs text-zinc-400 mt-1">DoneDeal 252 & Marketplace Ads</p>
           </div>
 
           <div className="p-5 rounded-2xl bg-zinc-900/40 border border-zinc-800/80 hover:border-amber-500/40 transition-all">
@@ -125,7 +125,7 @@ export function Hero() {
             <div className="text-2xl sm:text-3xl font-bold text-zinc-100 tracking-tight">
               <StatCounter value={40} suffix="K+" />
             </div>
-            <p className="text-xs text-zinc-400 mt-1">GA4 Monitored Traffic</p>
+            <p className="text-xs text-zinc-400 mt-1">GA4 Verified Web Visitors</p>
           </div>
 
           <div className="p-5 rounded-2xl bg-zinc-900/40 border border-zinc-800/80 hover:border-violet-500/40 transition-all">
@@ -133,9 +133,9 @@ export function Hero() {
               <TrendingUp className="w-3.5 h-3.5" /> Local Interactions
             </div>
             <div className="text-2xl sm:text-3xl font-bold text-zinc-100 tracking-tight">
-              <StatCounter value={11387} />
+              <StatCounter value={11.4} decimals={1} suffix="K+" />
             </div>
-            <p className="text-xs text-zinc-400 mt-1">Google Business Profile</p>
+            <p className="text-xs text-zinc-400 mt-1">Direct Calls, Maps & Enquiries</p>
           </div>
 
           <div className="p-5 rounded-2xl bg-zinc-900/40 border border-zinc-800/80 hover:border-rose-400/40 transition-all">
@@ -145,7 +145,7 @@ export function Hero() {
             <div className="text-2xl sm:text-3xl font-bold text-zinc-100 tracking-tight">
               1.4M<span className="text-zinc-500 text-lg font-normal"> / </span>72.6%
             </div>
-            <p className="text-xs text-zinc-400 mt-1">Meta Views & Linktree CTR</p>
+            <p className="text-xs text-zinc-400 mt-1">Meta Content Views & Linktree CTR</p>
           </div>
         </motion.div>
       </Container>

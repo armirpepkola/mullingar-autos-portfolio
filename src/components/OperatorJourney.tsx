@@ -12,7 +12,7 @@ const operatorPillars = [
     icon: Users,
     title: "Customer Service & Warmth",
     description: "Making everyone instantly comfortable with an infectious laugh that fills the room, a down-to-earth presence, and genuine care for every single person.",
-    note: "Recognized a mile away! 😊",
+    note: "Recognised a mile away! 😊",
     rotation: "-rotate-1",
   },
   {
@@ -57,7 +57,7 @@ export function OperatorJourney() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-16 p-8 rounded-[32px] bg-linear-to-r from-rose-950/30 via-zinc-900/80 to-amber-950/30 border border-rose-500/30 flex flex-col sm:flex-row items-center gap-6 relative overflow-hidden group shadow-2xl"
+          className="mb-16 p-8 rounded-4xl bg-linear-to-r from-rose-950/30 via-zinc-900/80 to-amber-950/30 border border-rose-500/30 flex flex-col sm:flex-row items-center gap-6 relative overflow-hidden group shadow-2xl"
         >
           <div className="absolute top-0 right-0 w-64 h-64 bg-rose-500/10 rounded-full blur-3xl pointer-events-none" />
           <div className="w-16 h-16 rounded-2xl bg-rose-500/20 border border-rose-500/40 flex items-center justify-center shrink-0 shadow-lg shadow-rose-500/10">

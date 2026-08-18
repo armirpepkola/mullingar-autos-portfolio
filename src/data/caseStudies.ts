@@ -9,6 +9,7 @@ export interface CaseStudyModule {
   fullDetails: string;
   screenshotProofLabel: string;
   highlights: { label: string; value: string }[];
+  imageSrc: string;
 }
 
 export const caseStudyModules: CaseStudyModule[] = [
@@ -16,9 +17,9 @@ export const caseStudyModules: CaseStudyModule[] = [
     id: "done-deal",
     category: "Marketplace Advertising",
     title: "DoneDeal 252 Campaign",
-    subtitle: "High-Impact Native Units & Regional Inventory Targeting",
+    subtitle: "Native Units & Regional Inventory Targeting",
     metricBadge: "7.02M+ Impressions",
-    description: "Executed high-visibility multi-model campaigns targeting Westmeath and Midlands car buyers across custom buyer segments with Andreea's signature precision.",
+    description: "Executed visibile multi model display campaigns targeting Westmeath and Midlands car buyers across custom intent segments during peak registration windows.",
     strategyPoints: [
       "4.11M+ impressions generated for Volkswagen inventory.",
       "2.91M+ impressions generated for ŠKODA inventory.",
@@ -32,29 +33,31 @@ export const caseStudyModules: CaseStudyModule[] = [
       { label: "Direct Clicks", value: "5,969" },
       { label: "Peak CTR", value: "0.16%" },
       { label: "Focus Brands", value: "VW & ŠKODA" }
-    ]
+    ],
+    imageSrc: "/proof/donedeal.png"
   },
   {
     id: "google-ads",
     category: "Search Engine Advertising",
     title: "Google Ads PPC Engine",
-    subtitle: "Precision Keyword Bidding & Brand Defense",
+    subtitle: "Keyword Bidding & Brand Defense",
     metricBadge: "141K+ Impressions",
-    description: "Balanced brand defense, new model search intent, and high-volume regional used car keywords with ultra-low CPC efficiency.",
+    description: "Balanced brand defense, new model search intent, and high volume regional used car keywords with ultra low CPC efficiency.",
     strategyPoints: [
       "141,700 total search impressions captured in competitive regional market.",
       "4,980 high-intent click-throughs driven directly to inventory pages.",
-      "Optimized average Cost-Per-Click (CPC) down between €0.24 and €0.46.",
+      "Optimised average Cost-Per-Click (CPC) down between €0.24 and €0.46.",
       "Structured ad groups around specific model launches (ID. Series, Tayron, Kodiaq)."
     ],
-    fullDetails: "Rigorous negative keyword management and local geo-targeting ensured ad spend was concentrated exclusively within high-conversion radius zones around Westmeath, maximizing lead quality while minimizing wasteful broad-match spend.",
+    fullDetails: "Thorough negative keyword management and local geo-targeting ensured ad spend was concentrated exclusively within high-conversion radius zones around Westmeath, maximizing lead quality while minimizing wasteful broad-match spend.",
     screenshotProofLabel: "Google Ads Manager CPC & Conversion Attribution Screenshot",
     highlights: [
       { label: "Search Impressions", value: "141,700" },
       { label: "Total Clicks", value: "4,980" },
       { label: "Avg. CPC", value: "€0.24 - €0.46" },
       { label: "Targeting", value: "Geo-Regional" }
-    ]
+    ],
+    imageSrc: "/proof/google-ads-ppc.png"
   },
   {
     id: "ga4-analytics",
@@ -69,27 +72,28 @@ export const caseStudyModules: CaseStudyModule[] = [
       "Tracked 117,000+ views specifically on the `/used-cars/search/` inventory path.",
       "Evaluated traffic split: Organic Search (31k sessions) vs Paid Search (21k sessions)."
     ],
-    fullDetails: "GA4 event tracking allowed us to isolate drop-off points in the vehicle finance calculator and enquiry forms, leading to UX adjustments that boosted mobile lead conversion rates.",
+    fullDetails: "Leveraged Google Analytics 4 to map valued user journeys, tracking over 640,000 site events and pinpointing intentful traffic streams driving record volume to core inventory pages.",
     screenshotProofLabel: "GA4 Audience Overview & Traffic Channel Breakdown Report",
     highlights: [
       { label: "Active Users", value: "40,000+" },
       { label: "Total Interactions", value: "640,000+" },
       { label: "Avg. Engagement", value: "3m 07s" },
       { label: "Used Car Views", value: "117k+" }
-    ]
+    ],
+    imageSrc: "/proof/ga4.png"
   },
   {
     id: "cms-seo",
     category: "CMS & On-Page SEO",
     title: "SEO Architecture & Dynamic CMS",
-    subtitle: "Dynamic Meta Tags & Model Launch Landing Pages",
+    subtitle: "Dynamic Meta Tags & Landing Pages",
     metricBadge: "Top Regional Rankings",
-    description: "Built high-performance model launch landing pages and automated dynamic meta tags for local search dominance.",
+    description: "Built high performance model launch landing pages and automated dynamic meta tags for local search dominance.",
     strategyPoints: [
       "Implemented dynamic meta tag architecture (`%pagetitle%`, `%town%`) across inventory.",
       "Designed custom HTML landing pages for major launches like Tayron Edition 75 and ID. Series.",
       "Authored keyword-dense meta descriptions targeting Mullingar, Athlone, and Longford buyers.",
-      "Optimized Core Web Vitals for mobile shoppers browsing on 4G/5G connections."
+      "Optimised Core Web Vitals for mobile shoppers browsing on 4G/5G connections."
     ],
     fullDetails: "Technical SEO enhancements ensured rapid indexing of newly arrived approved used vehicles, capturing high-intent long-tail search queries ahead of competing independent dealers.",
     screenshotProofLabel: "CMS Landing Page Editor & Dynamic Meta Tag Configuration Proof",
@@ -98,29 +102,31 @@ export const caseStudyModules: CaseStudyModule[] = [
       { label: "Key Launches", value: "Tayron & ID. Series" },
       { label: "Mobile Optimization", value: "100% Responsive" },
       { label: "Search Intent", value: "Local Capture" }
-    ]
+    ],
+    imageSrc: "/proof/cms-seo.png"
   },
   {
     id: "local-seo",
     category: "Local SEO & Lead Capture",
-    title: "Google Business Profile Optimization",
+    title: "Google Business Optimisation",
     subtitle: "Map Visibility, Direct Calls & Showroom Footfall",
     metricBadge: "11.3K+ Interactions",
-    description: "Maximized local map pack visibility and streamlined customer touchpoints to drive phone calls and showroom visits.",
+    description: "Maximised local map pack visibility and streamlined customer touchpoints to drive phone calls and showroom visits.",
     strategyPoints: [
       "11,387 total customer interactions recorded on Google Business Profile.",
       "5,863 direct website visits generated from map listings.",
       "3,143 map direction requests and 2,381 direct phone calls logged.",
       "Maintained a stellar 4.4★ rating across 295 verified customer reviews."
     ],
-    fullDetails: "Active reputation management, weekly Google Posts highlighting current finance offers, and prompt response times to customer Q&A converted casual searchers into high-intent showroom visitors.",
+    fullDetails: "Active reputation management, weekly Google Posts highlighting current finance offers, and prompt response times to customer Q&A converted casual searchers into high intent showroom visitors.",
     screenshotProofLabel: "Google Business Profile Insights & Call Volume Analytics",
     highlights: [
       { label: "Total Interactions", value: "11,387" },
       { label: "Website Visits", value: "5,863" },
       { label: "Direction Requests", value: "3,143" },
-      { label: "Review Rating", value: "4.4★ (295 Reviews)" }
-    ]
+      { label: "Review Rating", value: "4.4★" }
+    ],
+    imageSrc: "/proof/google-business.png"
   },
   {
     id: "social-video",
@@ -128,7 +134,7 @@ export const caseStudyModules: CaseStudyModule[] = [
     title: "Instagram Reels & Meta Growth",
     subtitle: "Walk-Arounds, Creator Benchmarking & View Retention",
     metricBadge: "1.4M+ Video Views",
-    description: "Scripted, filmed, and edited dynamic short-form walk-arounds featuring dealership personalities that outperformed static posts 2x.",
+    description: "Scripted, filmed, and edited dynamic short-form content featuring dealership personalities that outperformed static posts 2x.",
     strategyPoints: [
       "1.4M total video views achieved across Meta suite campaigns.",
       "11.5K Reels views generated with 9h 48m total watch time.",
@@ -142,15 +148,16 @@ export const caseStudyModules: CaseStudyModule[] = [
       { label: "Reels Watch Time", value: "9h 48m" },
       { label: "Avg Retention", value: "10 Seconds" },
       { label: "Format", value: "Mobile Vertical" }
-    ]
+    ],
+    imageSrc: "/proof/reels-data.png"
   },
   {
     id: "linktree-conversion",
-    category: "Social Conversion Architecture",
+    category: "Conversion Architecture",
     title: "Bio Link Conversion Engine",
-    subtitle: "Instagram Linktree Optimization & Traffic Routing",
+    subtitle: "Linktree Optimization & Traffic Routing",
     metricBadge: "72.6% Lifetime CTR",
-    description: "Engineered a high-conversion social bio hub routing Instagram traffic directly to active vehicle stock and finance calculators.",
+    description: "Created a high conversion social bio hub routing Instagram traffic directly to active vehicle stock and finance calculators.",
     strategyPoints: [
       "965 total profile views converted into 701 high-intent link clicks.",
       "Achieved an exceptional 72.6% lifetime Click-Through Rate (CTR).",
@@ -164,6 +171,7 @@ export const caseStudyModules: CaseStudyModule[] = [
       { label: "Total Link Clicks", value: "701" },
       { label: "Lifetime CTR", value: "72.6%" },
       { label: "Used Car Routing", value: "502 Clicks" }
-    ]
+    ],
+    imageSrc: "/proof/bio.png"
   }
 ];
