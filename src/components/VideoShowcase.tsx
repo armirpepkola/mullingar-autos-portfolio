@@ -180,7 +180,6 @@ export function VideoShowcase() {
                 <iframe
                   src="https://www.instagram.com/reel/DPPGcRTAhDk/embed"
                   className="w-full h-full rounded-2xl border-0"
-                  allowTransparency={true}
                   allow="encrypted-media"
                 />
               </div>

@@ -6,6 +6,7 @@ import { Footer } from "@/components/Footer";
 import { FloatingBotanicalGarden } from "@/components/ui/FloatingBotanicalGarden";
 import { ScrollBloomingFlower } from "@/components/ui/ScrollBloomingFlower";
 import { PetalCursor } from "@/components/ui/PetalCursor";
+import { BackToTop } from "@/components/ui/BackToTop";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <VideoShowcase />
       <OperatorJourney />
       <Footer />
+      <BackToTop />
     </main>
   );
 }

@@ -185,6 +185,7 @@ export function CaseStudiesGrid() {
                           src={selectedModule.imageSrc} 
                           alt={`Screenshot proof for ${selectedModule.title}`}
                           fill
+                          sizes="(max-width: 768px) 100vw, 700px"
                           className="object-cover"
                         />
                       </div>
