@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Instrument_Serif, Caveat } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -37,6 +38,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${instrumentSerif.variable} ${caveat.variable} dark`}>
       <body className="bg-zinc-950 text-zinc-100 min-h-screen selection:bg-rose-500/30 selection:text-rose-200">
+        <Analytics />
         {children}
       </body>
     </html>
