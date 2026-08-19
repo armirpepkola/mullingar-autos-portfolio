@@ -24,8 +24,8 @@ const caveat = Caveat({
 });
 
 export const metadata: Metadata = {
-  title: "Andreea | Digital Marketing Portfolio & Mullingar Autos Growth Engine",
-  description: "Data-driven campaign execution, local SEO optimisation, short-form video production, and high-performance advertising scaling regional automotive sales.",
+  title: "Andreea | Marketing Portfolio",
+  description: "Data-driven campaign execution, local SEO optimisation, content production, and high-performance advertising scaling regional sales.",
   keywords: ["Digital Marketing", "Growth Strategist", "Volkswagen", "ŠKODA", "Mullingar Autos", "Full-Stack Operator"],
 };
 
